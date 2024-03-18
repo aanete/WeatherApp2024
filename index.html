@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+		<title>Weather App 2024</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Whisper&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="weather-app">
+			<div class="container">
+				<form class="enter-city">
+					<input
+						type="search"
+						id="cityName"
+						placeholder="Enter a city..."
+						required
+					/>
+					<input
+						type="submit"
+						value="Search"
+						class="search-button"
+						id="button"
+					/>
+				</form>
+				<br />
+				<section class="today">
+					<div class="current-details">
+						<div class="current-city">San Francisco</div>
+						<div class="current-time" id="currentTime">Friday, 10:38</div>
+						<div class="current-clouds" id="clouds">Sunny</div>
+						<div class="current-humidity">
+							Humidity: <strong id="humidity">82%</strong>
+						</div>
+						<div class="current-wind">
+							Wind: <strong id="wind">2.06 m/s</strong>
+						</div>
+					</div>
+					<div class="current-temperature">
+						<span class="current-temp-icon">🌤️</span>
+						<span class="current-temp-degrees" id="current-temperature">9</span>
+						<span class="current-temp-unit">°C</span>
+					</div>
+				</section>
+				<ul>
+					<li>Sat ☀️ 16°/9°</li>
+					<li>Sun ☀️ 18°/10°</li>
+					<li>Mon 🌥️ 16°/9°</li>
+					<li>Tue 🌤️ 17°/10°</li>
+					<li>Wed ☀️ 18°/11°</li>
+					<li>Thu ☀️ 20°/12°</li>
+				</ul>
+			</div>
+			<br />
+			<footer>
+				This project was coded by
+				<a href="https://www.linkedin.com/in/anete-alksne/">Anete Alksne</a>
+				and is open-courced.
+			</footer>
+		</div>
+		<script src="java/script.js"></script>
+	</body>
+</html>

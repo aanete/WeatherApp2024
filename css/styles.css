@@ -1,0 +1,90 @@
+body {
+	background: #5585b5;
+}
+
+.container {
+	font-family: "Open Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	display: block;
+	margin: 0 auto;
+	max-width: 500px;
+	border: none;
+	border-radius: 5px;
+	background: radial-gradient(
+		circle at 10% 20%,
+		rgb(242, 235, 243) 0%,
+		rgb(234, 241, 249) 90.1%
+	);
+	box-shadow: 1px 10px 40px #25272f;
+	padding: 30px 30px;
+}
+
+.enter-city {
+	text-align: center;
+}
+
+input {
+	border-radius: 5px;
+	box-shadow: 1px 5px 10px #25272f;
+	padding: 15px 20px;
+	border: none;
+	font-size: 15px;
+}
+#cityName {
+	width: 70%;
+}
+
+#button {
+	background-color: #5585b5;
+}
+
+#button:hover {
+	background-color: #34618f;
+	transition: 200ms, ease-in-out;
+	cursor: pointer;
+}
+
+.today {
+	display: flex;
+	justify-content: space-around;
+}
+
+.today strong {
+	color: #34618f;
+}
+
+.current-city {
+	font-size: 30px;
+	font-weight: bold;
+}
+.current-temp-icon {
+	font-size: 40px;
+	position: relative;
+	top: -10px;
+}
+.current-temp-degrees {
+	font-size: 70px;
+	font-weight: bold;
+}
+
+.current-temp-unit {
+	font-size: 30px;
+	position: relative;
+	top: -27px;
+}
+
+footer {
+	text-align: center;
+	opacity: 0.5;
+}
+
+ul {
+	padding: 0 0;
+	text-align: center;
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+}
