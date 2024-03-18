@@ -19,6 +19,8 @@ function refreshWeather(response) {
 	currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
 	let currentWind = document.querySelector("#wind");
 	currentWind.innerHTML = `${response.data.wind.speed} m/s`;
+
+	getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -50,6 +52,14 @@ function handleSearch(event) {
 	let searchInput = document.querySelector("#cityName");
 
 	searchCity(searchInput.value);
+}
+
+function getForecast(city) {
+	let apiKey = "3441af01a760at92eea7f055fc4o28b5";
+	let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+	axios(apiUrl).then(displayForecast);
+
+	console.log(apiUrl);
 }
 
 function displayForecast() {
@@ -84,4 +94,3 @@ let searchForm = document.querySelector(".enter-city");
 searchForm.addEventListener("submit", handleSearch);
 
 searchCity("Bergen");
-displayForecast();
