@@ -63,19 +63,18 @@ input {
 .current-temp-icon {
 	font-size: 40px;
 	position: relative;
-	top: 10px;
+	top: 20px;
 }
 .current-temp-degrees {
 	font-size: 70px;
 	font-weight: bold;
 	position: relative;
-	top: 20px;
 }
 
 .current-temp-unit {
 	font-size: 30px;
 	position: relative;
-	top: -7px;
+	top: -30px;
 }
 
 footer {

@@ -6,9 +6,9 @@ function refreshWeather(response) {
 	let currentTemperature = document.querySelector("#current-temperature");
 	let temperature = Math.round(response.data.temperature.current);
 	currentTemperature.innerHTML = temperature;
-	//let currentIcon = document.querySelector(".current-temp-icon");
-	//let icon = response.data.condition.icon;
-	//currentIcon.innerHTML = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${icon}.png`;
+	let currentIcon = document.querySelector(".current-temp-icon");
+	let icon = response.data.condition.icon;
+	currentIcon.src = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${icon}.png`;
 	let currentCity = document.querySelector(".current-city");
 	currentCity.innerHTML = response.data.city;
 	let currentClouds = document.querySelector("#clouds");
