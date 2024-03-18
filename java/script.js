@@ -18,7 +18,7 @@ let currentTime = document.querySelector("#currentTime");
 let now = new Date();
 currentTime.innerHTML = formatDate(now);
 
-function displayTemperature(response) {
+function refreshWeather(response) {
 	console.log(response.data);
 	let currentTemperature = document.querySelector("#current-temperature");
 	let temperature = Math.round(response.data.temperature.current);
@@ -38,16 +38,21 @@ function displayTemperature(response) {
 	currentWind.innerHTML = `${response.data.wind.speed} m/s`;
 }
 
-function search(event) {
-	event.preventDefault();
-	let searchInput = document.querySelector("#cityName");
-
-	let city = searchInput.value;
+function searchCity(city) {
 	let apiKey = "3441af01a760at92eea7f055fc4o28b5";
 	let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-	axios.get(apiUrl).then(displayTemperature);
+	axios.get(apiUrl).then(refreshWeather);
+}
+
+function handleSearch(event) {
+	event.preventDefault();
+	let searchInput = document.querySelector("#cityName");
+
+	searchCity(searchInput.value);
 }
 
 let searchForm = document.querySelector(".enter-city");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSearch);
+
+searchCity("Bergen");
