@@ -50,6 +50,7 @@ input {
 .today {
 	display: flex;
 	justify-content: space-around;
+	font-size: smaller;
 }
 
 .today strong {
