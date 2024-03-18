@@ -1,25 +1,8 @@
-function formatDate(now) {
-	let days = [
-		"Sunday",
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday",
-	];
-
-	let day = days[now.getDay()];
-	let hours = now.getHours().toString().padStart(2, "0");
-	let minutes = now.getMinutes().toString().padStart(2, "0");
-	return `${day}, ${hours}:${minutes}, `;
-}
-let currentTime = document.querySelector("#currentTime");
-let now = new Date();
-currentTime.innerHTML = formatDate(now);
-
 function refreshWeather(response) {
 	console.log(response.data);
+	let currentTime = document.querySelector("#currentTime");
+	let date = new Date(response.data.time * 1000);
+	currentTime.innerHTML = formatDate(date);
 	let currentTemperature = document.querySelector("#current-temperature");
 	let temperature = Math.round(response.data.temperature.current);
 	currentTemperature.innerHTML = temperature;
@@ -36,6 +19,23 @@ function refreshWeather(response) {
 	currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
 	let currentWind = document.querySelector("#wind");
 	currentWind.innerHTML = `${response.data.wind.speed} m/s`;
+}
+
+function formatDate(date) {
+	let minutes = date.getMinutes().toString().padStart(2, "0");
+	let hours = date.getHours().toString().padStart(2, "0");
+	let days = [
+		"Sunday",
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+	];
+	let day = days[date.getDay()];
+
+	return `${day}, ${hours}:${minutes}, `;
 }
 
 function searchCity(city) {
