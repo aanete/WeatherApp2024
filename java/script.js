@@ -52,7 +52,36 @@ function handleSearch(event) {
 	searchCity(searchInput.value);
 }
 
+function displayForecast() {
+	let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+	let forecastHTML = "";
+
+	days.forEach(function (day) {
+		forecastHTML =
+			forecastHTML +
+			`        
+        <div class="forecast-one-block">
+            <div class="forecast-day">${day}</div>
+            <div class="forecast-icon">
+			    <img
+			    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+			    alt="forecast-icon"
+			    width="50px"
+			    />
+		    </div>
+		    <div class="forecast-degrees">
+			    <span class="forecast-degrees-max">16°</span> /
+			    <span class="forecast-degrees-min">9°</span>
+		    </div>
+        </div>
+`;
+	});
+	let forecastElement = document.querySelector(".forecast");
+	forecastElement.innerHTML = forecastHTML;
+}
+
 let searchForm = document.querySelector(".enter-city");
 searchForm.addEventListener("submit", handleSearch);
 
 searchCity("Bergen");
+displayForecast();
