@@ -12,7 +12,7 @@ function formatDate(now) {
 	let day = days[now.getDay()];
 	let hours = now.getHours().toString().padStart(2, "0");
 	let minutes = now.getMinutes().toString().padStart(2, "0");
-	return `${day}, ${hours}:${minutes}`;
+	return `${day}, ${hours}:${minutes}, `;
 }
 let currentTime = document.querySelector("#currentTime");
 let now = new Date();

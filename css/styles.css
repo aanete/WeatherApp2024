@@ -1,5 +1,5 @@
 body {
-	background: rgb(101, 146, 191);
+	background: rgb(101, 146, 191, 0.8);
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 		rgb(222, 234, 247) 95.1%
 	);
 	box-shadow: 1px 10px 40px #25272f;
-	padding: 30px 30px;
+	padding: 30px 30px 20px 30px;
 }
 
 .enter-city {
@@ -63,17 +63,19 @@ input {
 .current-temp-icon {
 	font-size: 40px;
 	position: relative;
-	top: -10px;
+	top: 10px;
 }
 .current-temp-degrees {
 	font-size: 70px;
 	font-weight: bold;
+	position: relative;
+	top: 20px;
 }
 
 .current-temp-unit {
 	font-size: 30px;
 	position: relative;
-	top: -27px;
+	top: -7px;
 }
 
 footer {
