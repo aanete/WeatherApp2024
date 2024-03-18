@@ -1,5 +1,5 @@
 body {
-	background: #5585b5;
+	background: rgb(101, 146, 191);
 }
 
 .container {
@@ -13,10 +13,10 @@ body {
 	max-width: 500px;
 	border: none;
 	border-radius: 5px;
-	background: radial-gradient(
-		circle at 10% 20%,
-		rgb(242, 235, 243) 0%,
-		rgb(234, 241, 249) 90.1%
+	background: linear-gradient(
+		179.7deg,
+		rgb(242, 246, 249) 4.9%,
+		rgb(222, 234, 247) 95.1%
 	);
 	box-shadow: 1px 10px 40px #25272f;
 	padding: 30px 30px;
@@ -38,11 +38,11 @@ input {
 }
 
 #button {
-	background-color: #5585b5;
+	background-color: rgb(101, 146, 191);
 }
 
 #button:hover {
-	background-color: #34618f;
+	background-color: #4874a0;
 	transition: 200ms, ease-in-out;
 	cursor: pointer;
 }
